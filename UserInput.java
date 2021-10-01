@@ -69,13 +69,27 @@ public class UserInput {
 	        System.out.println("       ");
 //
 //			3. Write a program to see if a user entered string is a palindrome or not
-
-	        
-	        
-	        
-	        
-	        
-	        
+	      //Allows for another input after problem 2
+	    	scan.nextLine();
+	     
+	     System.out.println("Enter a word to check if it is a palindrome: ");
+	      
+	        String origString = scan.nextLine();
+	        String reverseString = "";
+	         
+	        char[] characters = origString.toCharArray();
+	 
+	        for( int p = characters.length - 1 ; p >= 0 ; p-- ) {
+	            reverseString = reverseString + characters[p];
+	        }
+	 
+	        //Check palindrome string
+	        // .equals verifies the boolean true or false
+	        if (origString.equals(reverseString)) {
+	            System.out.println("String is a palindrome.");
+	        } else {
+	            System.out.println("String is not a palindrome.");
+	        }
 	        
 	        
 	        
